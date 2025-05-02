@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Your Name | Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
-  <!-- Import Images Folder -->
   <link rel="preload" href="/assets/images/profile.jpeg" as="image">
-  <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
-
-
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Customize Tailwind Colors -->
   <script>
     tailwind.config = {
       theme: {
@@ -32,329 +25,288 @@
       }
     }
   </script>
+  <style>
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
 
-<style>
-  @keyframes fade-in-up {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .animate-fade-in-up {
-    animation: fade-in-up 0.8s ease-out both;
-  }
-  
-  .delay-200 {
-    animation-delay: 0.2s;
-  }
-  </style>
 
-<style>
-  /* Rainbow Animation */
-  @keyframes rainbow {
-    0% {
-      background-position: 0% 50%;
+    .animate-fade-in-up {
+      animation: fade-in-up 0.8s ease-out both;
     }
-    50% {
-      background-position: 100% 50%;
+
+    .delay-200 {
+      animation-delay: 0.2s;
     }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-  /* Rainbow Button Style */
-  .rainbow-button {
-    background: linear-gradient(270deg, 
-      #ff6ec4, #7873f5, #4ade80, #facc15, #f472b6, #60a5fa, #a78bfa);
-    background-size: 1400% 1400%;
-    animation: rainbow 8s ease infinite;
-    color: #0f172a; /* Dark text color for contrast */
-    font-weight: bold;
-  }
   </style>
-  
-  
-  
+  <style>
+    @keyframes rainbow {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .rainbow-button {
+      background: linear-gradient(270deg,
+          #ff6ec4, #7873f5, #4ade80, #facc15, #f472b6, #60a5fa, #a78bfa);
+      background-size: 1400% 1400%;
+      animation: rainbow 8s ease infinite;
+      color: #0f172a;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body class="bg-background text-white font-sans">
-  <!-- Floating Social Links -->
-<div class="fixed top-1/3 left-4 flex flex-col space-y-4 z-50">
-  <!-- Twitter -->
-  <a href="https://twitter.com/home" target="_blank" class="text-white text-3xl transition-transform duration-300 hover:scale-125 hover:text-sky-400">
-    <i class="fab fa-twitter"></i>
-  </a>
-
-  <!-- Medium -->
-  <a href="https://link.medium.com/ASUd254EKhb" target="_blank" class="text-white text-3xl transition-transform duration-300 hover:scale-125 hover:text-sky-400">
-    <i class="fab fa-medium"></i>
-  </a>
-
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/grace-mugoiri-829019134/" target="_blank" class="text-white text-3xl transition-transform duration-300 hover:scale-125 hover:text-sky-400">
-    <i class="fab fa-linkedin"></i>
-  </a>
-
-  <!-- GitHub -->
-  <a href="https://github.com/grace-mugoiri" target="_blank" class="text-white text-3xl transition-transform duration-300 hover:scale-125 hover:text-sky-400">
-    <i class="fab fa-github"></i>
-  </a>
-</div>
-
-
-<!-- HERO + CTA COMBINED -->
-<section id="hero" class="min-h-screen bg-background p-8 text-white flex flex-col items-center justify-center text-center gap-6 relative">
-  <!-- Background Overlay -->
-  <div class="absolute inset-0 bg-black opacity-40"></div>
-
-  <div class="relative z-10 flex flex-col items-center justify-center max-w-4xl">
-    <h1 class="text-5xl md:text-6xl text-skyBlue font-bold animate-fade-in-up mb-4">
-      Crafting Code, Creating Impact
-    </h1>
-    <br>
-    <p class="text-xl text-gray-300 animate-fade-in-up delay-200 mb-8 text-center">
-      <span class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
-        Software Developer
-      </span>
-      |
-      <span class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
-        Problem Solver
-      </span>
-      |
-      <span class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
-        Bitcoin Enthusiast
-      </span>
-      |
-      <span class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
-        Open Source Contributor
-      </span>
-      |
-      <span class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
-        Lifelong Learner
-      </span>
-      |
-      <span class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
-        Web3 Explorer
-      </span>
-    </p>
-    
-      
-
-    <h2 class="text-2xl md:text-3xl font-semibold animate-fade-in-up delay-400 mb-2">
-      Would you like to see my skills in action?
-    </h2>
-    <p class="text-lg text-gray-400 animate-fade-in-up delay-500 mb-6">
-      I'm ready to bring your ideas to life. Let's work together!
-    </p>
-
-    <div class="flex flex-col md:flex-row gap-4 animate-fade-in-up delay-600">
-  
-      <!-- Hire Me Button -->
-      <a href="#contact" class="rainbow-button text-background px-6 py-3 rounded-full font-semibold transition transform hover:scale-105">
-        Hire Me
-      </a>
-    
-      <!-- Download Resume Button -->
-      <a href="/assets/Grace_Mugoiri_Resume.pdf" download class="rainbow-button text-background px-6 py-3 rounded-full font-semibold transition transform hover:scale-105">
-        Download My Resume
-      </a>
-    
-    </div>
-    
-  </div>
-</section>
-
-
-
-
-  <!-- ABOUT ME SECTION -->
-<section id="about" class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 p-2 bg-background text-white">
-  
-  <!-- Image -->
-  <div class="w-full md:w-1/3 flex justify-center">
-    <img src="./assets/images/profile.jpeg" alt="Grace Mugoiri" class="rounded-3xl w-73 h-73 object-cover shadow-2xl border-4 border-neonPink animate-fade-in-up">
-  </div>
-  
-  <!-- Text -->
-  <div class="w-full md:w-1/2 flex flex-col justify-center items-start animate-fade-in-up delay-200">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-skyBlue">About Me</h2>
-    <p class="text-lg text-gray-300 mb-6 leading-relaxed">
-      I'm Grace Mugoiri, a passionate Software Developer who loves solving real-world problems through creative digital solutions. I have experience in web development, backend systems, and blockchain technology. 
-      <br><br>
-      I'm dedicated to continuous learning, building beautiful user experiences, and contributing to open-source projects.
-      <br>
-      An active member of 
-      <a href="https://btcdada.com//" target="_blank" class="text-aquaGreen underline hover:text-lightYellow transition">
-        Bitcoin DADA
-      </a> 
-      and 
-      <a href="#" class="text-aquaGreen underline hover:text-lightYellow transition">
-        Tech Sisters Kenya
-      </a>, 
-      where I collaborate with like-minded individuals to empower women in tech and blockchain spaces.
-    </p>
-    <p class="text-lg text-gray-300 mb-6 leading-relaxed">
-      My journey into development is driven by a deep curiosity and a desire to solve problems through code.  
-      I enjoy contributing to open-source projects, mentoring aspiring developers, and continuously learning  
-      new technologies. I have built projects like a <strong>Bitcoin wallet application</strong> using Flask and Bitcoin Core RPC,  
-      and I am eager to explore <strong>Lightning Network</strong> integration for faster payments.  
-    </p>
-    <p class="text-lg text-gray-300 mb-6 leading-relaxed">I also happen to write tech articles which are all found on medium.</p>
-    <a href="#contact" class="mt-4 bg-aquaGreen text-background px-6 py-3 rounded-full font-semibold hover:bg-green-400 transition">
-      Get In Touch
+  <div class="fixed top-1/3 left-4 flex flex-col space-y-4 z-50">
+    <a href="https://twitter.com/home" target="_blank"
+      class="text-white text-3xl transition-transform duration-300 hover:scale-125 hover:text-sky-400">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://link.medium.com/ASUd254EKhb" target="_blank"
+      class="text-white text-3xl transition-transform duration-300 hover:scale-125 hover:text-sky-400">
+      <i class="fab fa-medium"></i>
+    </a>
+    <a href="https://www.youtube.com/@PythonBits-m3t3y" target="_blank"
+      class="text-white text-3xl transition-transform duration-300 hover:scale-125 hover:text-sky-400">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/grace-mugoiri-829019134/" target="_blank"
+      class="text-white text-3xl transition-transform duration-300 hover:scale-125 hover:text-sky-400">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/grace-mugoiri" target="_blank"
+      class="text-white text-3xl transition-transform duration-300 hover:scale-125 hover:text-sky-400">
+      <i class="fab fa-github"></i>
     </a>
   </div>
-
-</section>
-
-<!-- PROJECTS SECTION -->
-<section id="projects" class="min-h-screen bg-background p-2 text-white flex flex-col items-center">
-
-  <h2 class="text-3xl md:text-4xl font-bold mb-12 text-skyBlue animate-fade-in-up">Projects</h2>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
-
-    <!-- Project Card 1 -->
-    <div class="bg-[#1A1A40] rounded-2xl overflow-hidden shadow-lg p-2 flex flex-col justify-between animate-fade-in-up">
-      <div>
-        <h3 class="text-2xl font-bold mb-4 text-neonPink">My Portfolio Website</h3>
-        <p class="text-gray-400 mb-4">A personal portfolio website to showcase my skills, projects, and experience as a software developer.</p>
-        <p class="text-sm text-aquaGreen mb-4">Built with: HTML, Tailwind CSS, JavaScript</p>
+  <section id="hero"
+    class="min-h-screen bg-background p-8 text-white flex flex-col items-center justify-center text-center gap-6 relative">
+    <div class="absolute inset-0 bg-black opacity-40"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center max-w-4xl">
+      <h1 class="text-5xl md:text-6xl text-skyBlue font-bold animate-fade-in-up mb-4">
+        Crafting Code, Creating Impact
+      </h1>
+      <br>
+      <p class="text-xl text-gray-300 animate-fade-in-up delay-200 mb-8 text-center">
+        <span
+          class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
+          Software Developer
+        </span>
+        |
+        <span
+          class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
+          Problem Solver
+        </span>
+        |
+        <span
+          class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
+          Bitcoin Enthusiast
+        </span>
+        |
+        <span
+          class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
+          Open Source Contributor
+        </span>
+        |
+        <span
+          class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
+          Lifelong Learner
+        </span>
+        |
+        <span
+          class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
+          Web3 Explorer
+        </span>
+      </p>
+      <h2 class="text-2xl md:text-3xl font-semibold animate-fade-in-up delay-400 mb-2">
+        Would you like to see my skills in action?
+      </h2>
+      <p class="text-lg text-gray-400 animate-fade-in-up delay-500 mb-6">
+        I'm ready to bring your ideas to life. Let's work together!
+      </p>
+      <div class="flex flex-col md:flex-row gap-4 animate-fade-in-up delay-600">
+        <a href="#contact"
+          class="rainbow-button text-background px-6 py-3 rounded-full font-semibold transition transform hover:scale-105">
+          Hire Me
+        </a>
+        <a href="/assets/Grace_Mugoiri_Resume.pdf" download
+          class="rainbow-button text-background px-6 py-3 rounded-full font-semibold transition transform hover:scale-105">
+          Download My Resume
+        </a>
       </div>
-      <span class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white rounded-full text-sm font-semibold animate-pulse cursor-default">
-        You're Here ✨
-      </span>
     </div>
-
-    <!-- Project Card 2 -->
-    <div class="bg-[#1A1A40] rounded-2xl overflow-hidden shadow-lg p-2 flex flex-col justify-between animate-fade-in-up delay-200">
-      <div>
-        <h3 class="text-2xl font-bold mb-4 text-neonPink">Pay With Sats</h3>
-        <p>A Bitcoin payment system that allows users to pay with Satoshis, from anywhere round the globe.</p>
-        <p class="text-sm text-aquaGreen mb-4">Built with: Python, Flask, Bitcoin RPC</p>
-      </div>
-      <a href="https://github.com/wandiamugo/PaywithSats/tree/develop" 
-   class="mt-auto bg-aquaGreen text-background px-4 py-2 rounded-full font-semibold hover:bg-green-400 transition">
-   View Project
-</a>
-
+  </section>
+  <section id="about"
+    class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 p-2 bg-background text-white">
+    <div class="w-full md:w-1/3 flex justify-center">
+      <img src="./assets/images/profile.jpeg" alt="Grace Mugoiri"
+        class="rounded-3xl w-73 h-73 object-cover shadow-2xl border-4 border-neonPink animate-fade-in-up">
     </div>
-
-    <!-- Project Card 3 -->
-    <div class="bg-[#1A1A40] rounded-2xl overflow-hidden shadow-lg p-2 flex flex-col justify-between animate-fade-in-up delay-300">
-      <div>
-        <h3 class="text-2xl font-bold mb-4 text-neonPink">Cocktails Recipe</h3>
-        <p>A Simple Flask web application that performs CRUD by adding cocktail recipes.</p>
-        <p class="text-sm text-aquaGreen mb-4">Built with: Tailwind CSS, Python(Flask)</p>
-      </div>
-      <a href="https://mococo-cocktails.onrender.com/" class="mt-auto bg-skyBlue text-background px-4 py-2 rounded-full text-center font-semibold hover:bg-blue-400 transition">
-        View Project
+    <div class="w-full md:w-1/2 flex flex-col justify-center items-start animate-fade-in-up delay-200">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-skyBlue">About Me</h2>
+      <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+        I'm Grace Mugoiri, a passionate Software Developer who loves solving real-world problems through creative
+        digital solutions. I have experience in web development, backend systems, and blockchain technology.
+        <br><br>
+        I'm dedicated to continuous learning, building beautiful user experiences, and contributing to open-source
+        projects.
+        <br>
+        An active member of
+        <a href="https://btcdada.com//" target="_blank"
+          class="text-aquaGreen underline hover:text-lightYellow transition">
+          Bitcoin DADA
+        </a>
+        and
+        <a href="#" class="text-aquaGreen underline hover:text-lightYellow transition">
+          Tech Sisters Kenya
+        </a>,
+        where I collaborate with like-minded individuals to empower women in tech and blockchain spaces.
+      </p>
+      <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+        My journey into development is driven by a deep curiosity and a desire to solve problems through code.
+        I enjoy contributing to open-source projects, mentoring aspiring developers, and continuously learning
+        new technologies. I have built projects like a <strong>Bitcoin wallet application</strong> using Flask and
+        Bitcoin Core RPC,
+        and I am eager to explore <strong>Lightning Network</strong> integration for faster payments.
+      </p>
+      <p class="text-lg text-gray-300 mb-6 leading-relaxed">I also happen to write tech articles which are all found on
+        medium.</p>
+      <a href="#contact"
+        class="mt-4 bg-aquaGreen text-background px-6 py-3 rounded-full font-semibold hover:bg-green-400 transition">
+        Get In Touch
       </a>
     </div>
-
-
-  </div>
-
-</section>
-
-<!-- SKILLS SECTION -->
-<section id="skills" class="min-h-screen bg-background p-2 text-white flex flex-col items-center">
-
-  <h2 class="text-3xl md:text-4xl font-bold mb-12 text-skyBlue animate-fade-in-up">Skills</h2>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center max-w-4xl animate-fade-in-up delay-100">
-
-    <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-      <i class="fab fa-laravel"></i> Laravel
-    </span>
-    <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-      <i class="fab fa-css3-alt"></i> CSS / Tailwind CSS
-    </span>
-    <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-      <i class="fab fa-js"></i> JavaScript
-    </span>
-    <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-      <i class="fab fa-python"></i> Python
-    </span>
-    <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-      <i class="fas fa-flask"></i> Flask
-    </span>
-    <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-      <i class="fas fa-coins"></i> Bitcoin Core RPC
-    </span>
-    <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-      <i class="fab fa-react"></i> React
-    </span>
-    <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-      <i class="fab fa-git-alt"></i> Git & GitHub
-    </span>
-    <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-      <i class="fas fa-server"></i> REST APIs
-    </span>
-
-  </div>
-
-</section>
-
-<!-- CONTACT SECTION -->
-<section id="contact" class="min-h-screen bg-background p-2 text-white flex flex-col items-center">
-
-  <h2 class="text-3xl md:text-4xl font-bold mb-12 text-skyBlue animate-fade-in-up">Contact Me</h2>
-
-  <form action="mailto:your.email@example.com" method="POST" enctype="text/plain" class="w-full max-w-lg flex flex-col gap-6 animate-fade-in-up delay-200">
-
-    <input type="text" name="name" placeholder="Your Name" required class="p-4 rounded-xl bg-[#1A1A40] text-white focus:outline-none focus:ring-2 focus:ring-neonPink">
-    
-    <input type="email" name="email" placeholder="Your Email" required class="p-4 rounded-xl bg-[#1A1A40] text-white focus:outline-none focus:ring-2 focus:ring-neonPink">
-    
-    <textarea name="message" rows="5" placeholder="Your Message" required class="p-4 rounded-xl bg-[#1A1A40] text-white focus:outline-none focus:ring-2 focus:ring-neonPink"></textarea>
-
-    <button type="submit" class="bg-aquaGreen hover:bg-green-400 text-background px-6 py-3 rounded-full font-semibold transition">
-      Send Message
-    </button>
-
-  </form>
-
-</section>
-<!-- FOOTER -->
-<footer class="bg-[#0D0D2B] text-gray-400 text-center p-2 rounded-t-3xl">
-
-  <p>© 2025 Grace Mugoiri. All Rights Reserved.</p>
-
-</footer>
-
-<!-- BACK TO TOP BUTTON -->
-<button id="backToTopBtn" 
-  class="fixed bottom-6 right-6 hidden bg-skyBlue text-background p-2 rounded-full shadow-lg hover:bg-blue-400 transition z-50 animate-bounce">
-  ↑
-</button>
-<script>
-  const backToTopBtn = document.getElementById('backToTopBtn');
-
-  // Show button after scrolling down
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      backToTopBtn.classList.remove('hidden');
-    } else {
-      backToTopBtn.classList.add('hidden');
-    }
-  });
-
-  // Scroll to top smoothly when clicked
-  backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  </section>
+  <section id="projects" class="min-h-screen bg-background p-2 text-white flex flex-col items-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-skyBlue animate-fade-in-up">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+      <div
+        class="bg-[#1A1A40] rounded-2xl overflow-hidden shadow-lg p-2 flex flex-col justify-between animate-fade-in-up">
+        <div>
+          <h3 class="text-2xl font-bold mb-4 text-neonPink">My Portfolio Website</h3>
+          <p class="text-gray-400 mb-4">A personal portfolio website to showcase my skills, projects, and experience as
+            a software developer.</p>
+          <p class="text-sm text-aquaGreen mb-4">Built with: HTML, Tailwind CSS, JavaScript</p>
+        </div>
+        <span
+          class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white rounded-full text-sm font-semibold animate-pulse cursor-default">
+          You're Here ✨
+        </span>
+      </div>
+      <div
+        class="bg-[#1A1A40] rounded-2xl overflow-hidden shadow-lg p-2 flex flex-col justify-between animate-fade-in-up delay-200">
+        <div>
+          <h3 class="text-2xl font-bold mb-4 text-neonPink">Pay With Sats</h3>
+          <p>A Bitcoin payment system that allows users to pay with Satoshis, from anywhere round the globe.</p>
+          <p class="text-sm text-aquaGreen mb-4">Built with: Python, Flask, Bitcoin RPC</p>
+        </div>
+        <a href="https://github.com/wandiamugo/PaywithSats/tree/develop"
+          class="mt-auto bg-aquaGreen text-background px-4 py-2 rounded-full font-semibold hover:bg-green-400 transition">
+          View Project
+        </a>
+      </div>
+      <div
+        class="bg-[#1A1A40] rounded-2xl overflow-hidden shadow-lg p-2 flex flex-col justify-between animate-fade-in-up delay-300">
+        <div>
+          <h3 class="text-2xl font-bold mb-4 text-neonPink">Cocktails Recipe</h3>
+          <p>A Simple Flask web application that performs CRUD by adding cocktail recipes.</p>
+          <p class="text-sm text-aquaGreen mb-4">Built with: Tailwind CSS, Python(Flask)</p>
+        </div>
+        <a href="https://mococo-cocktails.onrender.com/"
+          class="mt-auto bg-skyBlue text-background px-4 py-2 rounded-full text-center font-semibold hover:bg-blue-400 transition">
+          View Project
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="skills" class="min-h-screen bg-background p-2 text-white flex flex-col items-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-skyBlue animate-fade-in-up">Skills</h2>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center max-w-4xl animate-fade-in-up delay-100">
+      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
+        <i class="fab fa-laravel"></i> Laravel
+      </span>
+      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
+        <i class="fab fa-css3-alt"></i> CSS / Tailwind CSS
+      </span>
+      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
+        <i class="fab fa-js"></i> JavaScript
+      </span>
+      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
+        <i class="fab fa-python"></i> Python
+      </span>
+      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
+        <i class="fas fa-flask"></i> Flask
+      </span>
+      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
+        <i class="fas fa-coins"></i> Bitcoin Core RPC
+      </span>
+      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
+        <i class="fab fa-react"></i> React
+      </span>
+      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
+        <i class="fab fa-git-alt"></i> Git & GitHub
+      </span>
+      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
+        <i class="fas fa-server"></i> REST APIs
+      </span>
+    </div>
+  </section>
+  <section id="contact" class="min-h-screen bg-background p-2 text-white flex flex-col items-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-skyBlue animate-fade-in-up">Contact Me</h2>
+    <form action="mailto:your.email@example.com" method="POST" enctype="text/plain"
+      class="w-full max-w-lg flex flex-col gap-6 animate-fade-in-up delay-200">
+      <input type="text" name="name" placeholder="Your Name" required
+        class="p-4 rounded-xl bg-[#1A1A40] text-white focus:outline-none focus:ring-2 focus:ring-neonPink">
+      <input type="email" name="email" placeholder="Your Email" required
+        class="p-4 rounded-xl bg-[#1A1A40] text-white focus:outline-none focus:ring-2 focus:ring-neonPink">
+      <textarea name="message" rows="5" placeholder="Your Message" required
+        class="p-4 rounded-xl bg-[#1A1A40] text-white focus:outline-none focus:ring-2 focus:ring-neonPink"></textarea>
+      <button type="submit"
+        class="bg-aquaGreen hover:bg-green-400 text-background px-6 py-3 rounded-full font-semibold transition">
+        Send Message
+      </button>
+    </form>
+  </section>
+  <footer class="bg-[#0D0D2B] text-gray-400 text-center p-2 rounded-t-3xl">
+    <p>© 2025 Grace Mugoiri. All Rights Reserved.</p>
+  </footer>
+  <button id="backToTopBtn"
+    class="fixed bottom-6 right-6 hidden bg-skyBlue text-background p-2 rounded-full shadow-lg hover:bg-blue-400 transition z-50 animate-bounce">
+    ↑
+  </button>
+  <script>
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.remove('hidden');
+      } else {
+        backToTopBtn.classList.add('hidden');
+      }
     });
-  });
-</script>
-
-
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
+
 </html>
