@@ -73,92 +73,132 @@
 </head>
 
 <body class="bg-background text-white font-sans">
-  <div class="fixed top-1/3 left-4 flex flex-col space-y-4 z-50">
+  <!-- Navigation Header -->
+  <nav id="navbar"
+    class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#hero" class="text-2xl font-bold text-skyBlue hover:text-aquaGreen transition-colors">GM</a>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#about" class="nav-link text-gray-300 hover:text-aquaGreen transition-colors">About</a></li>
+        <li><a href="#experience" class="nav-link text-gray-300 hover:text-aquaGreen transition-colors">Journey</a></li>
+        <li><a href="#projects" class="nav-link text-gray-300 hover:text-aquaGreen transition-colors">Projects</a></li>
+        <li><a href="#blog" class="nav-link text-gray-300 hover:text-aquaGreen transition-colors">Blog</a></li>
+        <li><a href="#contact" class="nav-link text-gray-300 hover:text-aquaGreen transition-colors">Contact</a></li>
+      </ul>
+      <button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-background/98 border-t border-gray-800">
+      <ul class="flex flex-col space-y-4 p-6">
+        <li><a href="#about" class="nav-link text-gray-300 hover:text-aquaGreen transition-colors block">About</a></li>
+        <li><a href="#experience" class="nav-link text-gray-300 hover:text-aquaGreen transition-colors block">Journey</a></li>
+        <li><a href="#projects" class="nav-link text-gray-300 hover:text-aquaGreen transition-colors block">Projects</a></li>
+        <li><a href="#blog" class="nav-link text-gray-300 hover:text-aquaGreen transition-colors block">Blog</a></li>
+        <li><a href="#contact" class="nav-link text-gray-300 hover:text-aquaGreen transition-colors block">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Social Media Sidebar -->
+  <div class="fixed top-1/3 left-6 flex flex-col space-y-3 z-40 hidden lg:flex">
     <a href="https://twitter.com/home" target="_blank"
-      class="text-white text-3xl transition-transform duration-300 hover:scale-125 hover:text-sky-400">
-      <i class="fab fa-twitter"></i>
+      class="group relative w-14 h-14 bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-sky-400/50 border border-gray-800 hover:border-sky-400">
+      <i class="fab fa-twitter text-2xl text-gray-400 group-hover:text-sky-400 transition-colors"></i>
+      <span
+        class="absolute left-full ml-4 px-3 py-1 bg-sky-400 text-background rounded-lg text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+        Twitter
+      </span>
     </a>
     <a href="https://link.medium.com/ASUd254EKhb" target="_blank"
-      class="text-white text-3xl transition-transform duration-300 hover:scale-125 hover:text-sky-400">
-      <i class="fab fa-medium"></i>
+      class="group relative w-14 h-14 bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-white/50 border border-gray-800 hover:border-white">
+      <i class="fab fa-medium text-2xl text-gray-400 group-hover:text-white transition-colors"></i>
+      <span
+        class="absolute left-full ml-4 px-3 py-1 bg-white text-background rounded-lg text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+        Medium
+      </span>
     </a>
     <a href="https://www.youtube.com/@PythonBits-m3t3y" target="_blank"
-      class="text-white text-3xl transition-transform duration-300 hover:scale-125 hover:text-sky-400">
-      <i class="fab fa-youtube"></i>
+      class="group relative w-14 h-14 bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-red-500/50 border border-gray-800 hover:border-red-500">
+      <i class="fab fa-youtube text-2xl text-gray-400 group-hover:text-red-500 transition-colors"></i>
+      <span
+        class="absolute left-full ml-4 px-3 py-1 bg-red-500 text-white rounded-lg text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+        YouTube
+      </span>
     </a>
     <a href="https://www.linkedin.com/in/grace-mugoiri-829019134/" target="_blank"
-      class="text-white text-3xl transition-transform duration-300 hover:scale-125 hover:text-sky-400">
-      <i class="fab fa-linkedin"></i>
+      class="group relative w-14 h-14 bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-blue-500/50 border border-gray-800 hover:border-blue-500">
+      <i class="fab fa-linkedin text-2xl text-gray-400 group-hover:text-blue-500 transition-colors"></i>
+      <span
+        class="absolute left-full ml-4 px-3 py-1 bg-blue-500 text-white rounded-lg text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+        LinkedIn
+      </span>
     </a>
     <a href="https://github.com/grace-mugoiri" target="_blank"
-      class="text-white text-3xl transition-transform duration-300 hover:scale-125 hover:text-sky-400">
-      <i class="fab fa-github"></i>
+      class="group relative w-14 h-14 bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-purple-400/50 border border-gray-800 hover:border-purple-400">
+      <i class="fab fa-github text-2xl text-gray-400 group-hover:text-purple-400 transition-colors"></i>
+      <span
+        class="absolute left-full ml-4 px-3 py-1 bg-purple-400 text-background rounded-lg text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+        GitHub
+      </span>
     </a>
+    <div class="w-1 h-20 bg-gradient-to-b from-aquaGreen to-transparent mx-auto"></div>
   </div>
   <section id="hero"
-    class="min-h-screen bg-background p-8 text-white flex flex-col items-center justify-center text-center gap-6 relative">
-    <div class="absolute inset-0 bg-black opacity-40"></div>
-    <div class="relative z-10 flex flex-col items-center justify-center max-w-4xl">
-      <h1 class="text-5xl md:text-6xl text-skyBlue font-bold animate-fade-in-up mb-4">
-        Crafting Code, Creating Impact
-      </h1>
-      <br>
-      <p class="text-xl text-gray-300 animate-fade-in-up delay-200 mb-8 text-center">
-        <span
-          class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
-          Software Developer
-        </span>
-        |
-        <span
-          class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
-          Problem Solver
-        </span>
-        |
-        <span
-          class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
-          Bitcoin Enthusiast
-        </span>
-        |
-        <span
-          class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
-          Open Source Contributor
-        </span>
-        |
-        <span
-          class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
-          Lifelong Learner
-        </span>
-        |
-        <span
-          class="inline-block relative after:block after:h-0.5 after:bg-gray-500 after:scale-x-100 after:origin-center after:transition-transform mx-2">
-          Web3 Explorer
-        </span>
+    class="min-h-screen bg-background p-8 pt-24 text-white flex flex-col items-center justify-center text-center gap-6 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-background via-[#1A1A40]/50 to-background"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center max-w-4xl px-4">
+      <div class="mb-6">
+        <span class="text-aquaGreen text-lg font-semibold">Hello, I'm</span>
+        <h1 class="text-5xl md:text-7xl text-white font-bold mt-2 mb-4">
+          Grace Mugoiri
+        </h1>
+        <div class="text-3xl md:text-4xl text-skyBlue font-semibold mb-4">
+          <span id="typing-text"></span><span class="animate-pulse">|</span>
+        </div>
+      </div>
+      <p class="text-lg text-gray-400 mb-8 max-w-2xl">
+        I build elegant, performant web applications and blockchain solutions. Passionate about Bitcoin, open source,
+        and solving real-world problems through code.
       </p>
-      <h2 class="text-2xl md:text-3xl font-semibold animate-fade-in-up delay-400 mb-2">
-        Would you like to see my skills in action?
-      </h2>
-      <p class="text-lg text-gray-400 animate-fade-in-up delay-500 mb-6">
-        I'm ready to bring your ideas to life. Let's work together!
-      </p>
-      <div class="flex flex-col md:flex-row gap-4 animate-fade-in-up delay-600">
+      <div class="flex flex-wrap justify-center gap-3 mb-8 text-sm">
+        <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen border border-aquaGreen/30">Software
+          Developer</span>
+        <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen border border-aquaGreen/30">Bitcoin
+          Enthusiast</span>
+        <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen border border-aquaGreen/30">Open Source
+          Contributor</span>
+        <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen border border-aquaGreen/30">Web3 Explorer</span>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4">
         <a href="#contact"
-          class="rainbow-button text-background px-6 py-3 rounded-full font-semibold transition transform hover:scale-105">
-          Hire Me
+          class="rainbow-button text-background px-8 py-3 rounded-full font-semibold transition transform hover:scale-105 hover:shadow-lg hover:shadow-aquaGreen/50">
+          Let's Talk
+        </a>
+        <a href="#projects"
+          class="bg-transparent border-2 border-skyBlue text-skyBlue px-8 py-3 rounded-full font-semibold transition transform hover:scale-105 hover:bg-skyBlue hover:text-background">
+          View Projects
         </a>
         <a href="/assets/MugoiriResume_2025.pdf" download
-          class="rainbow-button text-background px-6 py-3 rounded-full font-semibold transition transform hover:scale-105">
-          Download My Resume
+          class="bg-transparent border-2 border-aquaGreen text-aquaGreen px-8 py-3 rounded-full font-semibold transition transform hover:scale-105 hover:bg-aquaGreen hover:text-background">
+          <i class="fas fa-download mr-2"></i>Resume
         </a>
       </div>
     </div>
   </section>
   <section id="about"
-    class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 p-2 bg-background text-white">
+    class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 px-6 py-20 bg-background text-white">
     <div class="w-full md:w-1/3 flex justify-center">
-      <img src="./assets/images/profile.jpeg" alt="Grace Mugoiri"
-        class="rounded-3xl w-73 h-73 object-cover shadow-2xl border-4 border-neonPink animate-fade-in-up">
+      <div class="relative group">
+        <div
+          class="absolute -inset-1 bg-gradient-to-r from-neonPink via-aquaGreen to-skyBlue rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000">
+        </div>
+        <img src="./assets/images/profile.jpeg" alt="Grace Mugoiri"
+          class="relative rounded-3xl w-80 h-80 object-cover shadow-2xl">
+      </div>
     </div>
-    <div class="w-full md:w-1/2 flex flex-col justify-center items-start animate-fade-in-up delay-200">
+    <div class="w-full md:w-1/2 flex flex-col justify-center items-start">
       <h2 class="text-3xl md:text-4xl font-bold mb-6 text-skyBlue">About Me</h2>
       <p class="text-lg text-gray-300 mb-6 leading-relaxed">
         I'm Grace Mugoiri, a passionate Software Developer who loves solving real-world problems through creative
@@ -193,120 +233,590 @@
       </a>
     </div>
   </section>
-  <section id="projects" class="min-h-screen bg-background p-2 text-white flex flex-col items-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-skyBlue animate-fade-in-up">Projects</h2>
+
+  <!-- Stats/Achievements Section -->
+  <section id="stats" class="bg-gradient-to-br from-[#1A1A40] to-background px-6 py-20 text-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-skyBlue text-center">Impact & Achievements</h2>
+      <p class="text-gray-400 mb-12 text-center max-w-2xl mx-auto">Numbers that tell my story</p>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <!-- Stat 1 -->
+        <div class="bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl p-6 text-center border border-gray-800 hover:border-neonPink transition transform hover:scale-105">
+          <i class="fas fa-code text-neonPink text-4xl mb-4"></i>
+          <div class="text-4xl md:text-5xl font-bold text-aquaGreen mb-2" data-counter="3">0</div>
+          <div class="text-gray-400 text-sm">Years Experience</div>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl p-6 text-center border border-gray-800 hover:border-aquaGreen transition transform hover:scale-105">
+          <i class="fas fa-project-diagram text-aquaGreen text-4xl mb-4"></i>
+          <div class="text-4xl md:text-5xl font-bold text-aquaGreen mb-2" data-counter="15">0</div>
+          <div class="text-gray-400 text-sm">Projects Built</div>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl p-6 text-center border border-gray-800 hover:border-skyBlue transition transform hover:scale-105">
+          <i class="fab fa-bitcoin text-skyBlue text-4xl mb-4"></i>
+          <div class="text-4xl md:text-5xl font-bold text-aquaGreen mb-2" data-counter="5">0</div>
+          <div class="text-gray-400 text-sm">Bitcoin Projects</div>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl p-6 text-center border border-gray-800 hover:border-yellow-500 transition transform hover:scale-105">
+          <i class="fas fa-users text-yellow-500 text-4xl mb-4"></i>
+          <div class="text-4xl md:text-5xl font-bold text-aquaGreen mb-2" data-counter="2">0</div>
+          <div class="text-gray-400 text-sm">Community Groups</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline/Experience Section -->
+  <section id="experience" class="min-h-screen bg-background px-6 py-20 text-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-skyBlue text-center">My Journey</h2>
+      <p class="text-gray-400 mb-12 text-center max-w-2xl mx-auto">From learning to building impactful solutions</p>
+
+      <div class="relative">
+        <!-- Timeline Line -->
+        <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-neonPink via-aquaGreen to-skyBlue"></div>
+
+        <!-- Timeline Items -->
+        <div class="space-y-12">
+          <!-- Item 1 -->
+          <div class="relative flex items-center">
+            <div class="hidden md:block md:w-1/2 pr-8 text-right">
+              <h3 class="text-xl font-bold text-neonPink mb-2">Software Developer</h3>
+              <p class="text-gray-400 mb-2">Building web applications & Bitcoin solutions</p>
+              <span class="text-sm text-aquaGreen">2022 - Present</span>
+            </div>
+            <div class="absolute left-8 md:left-1/2 w-4 h-4 bg-neonPink rounded-full border-4 border-background transform -translate-x-2"></div>
+            <div class="md:hidden ml-16 bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-xl p-4 border border-gray-800">
+              <h3 class="text-xl font-bold text-neonPink mb-2">Software Developer</h3>
+              <p class="text-gray-400 mb-2">Building web applications & Bitcoin solutions</p>
+              <span class="text-sm text-aquaGreen">2022 - Present</span>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="relative flex items-center md:flex-row-reverse">
+            <div class="hidden md:block md:w-1/2 pl-8">
+              <h3 class="text-xl font-bold text-aquaGreen mb-2">Bitcoin DADA Member</h3>
+              <p class="text-gray-400 mb-2">Community engagement & education on Bitcoin technology</p>
+              <span class="text-sm text-aquaGreen">2023 - Present</span>
+            </div>
+            <div class="absolute left-8 md:left-1/2 w-4 h-4 bg-aquaGreen rounded-full border-4 border-background transform -translate-x-2"></div>
+            <div class="md:hidden ml-16 bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-xl p-4 border border-gray-800">
+              <h3 class="text-xl font-bold text-aquaGreen mb-2">Bitcoin DADA Member</h3>
+              <p class="text-gray-400 mb-2">Community engagement & education on Bitcoin technology</p>
+              <span class="text-sm text-aquaGreen">2023 - Present</span>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="relative flex items-center">
+            <div class="hidden md:block md:w-1/2 pr-8 text-right">
+              <h3 class="text-xl font-bold text-skyBlue mb-2">Full Stack Development</h3>
+              <p class="text-gray-400 mb-2">Mastered Python, Flask, React, Laravel & blockchain tech</p>
+              <span class="text-sm text-aquaGreen">2021 - 2022</span>
+            </div>
+            <div class="absolute left-8 md:left-1/2 w-4 h-4 bg-skyBlue rounded-full border-4 border-background transform -translate-x-2"></div>
+            <div class="md:hidden ml-16 bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-xl p-4 border border-gray-800">
+              <h3 class="text-xl font-bold text-skyBlue mb-2">Full Stack Development</h3>
+              <p class="text-gray-400 mb-2">Mastered Python, Flask, React, Laravel & blockchain tech</p>
+              <span class="text-sm text-aquaGreen">2021 - 2022</span>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="relative flex items-center md:flex-row-reverse">
+            <div class="hidden md:block md:w-1/2 pl-8">
+              <h3 class="text-xl font-bold text-yellow-500 mb-2">Started Coding Journey</h3>
+              <p class="text-gray-400 mb-2">Discovered passion for programming and problem-solving</p>
+              <span class="text-sm text-aquaGreen">2020</span>
+            </div>
+            <div class="absolute left-8 md:left-1/2 w-4 h-4 bg-yellow-500 rounded-full border-4 border-background transform -translate-x-2"></div>
+            <div class="md:hidden ml-16 bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-xl p-4 border border-gray-800">
+              <h3 class="text-xl font-bold text-yellow-500 mb-2">Started Coding Journey</h3>
+              <p class="text-gray-400 mb-2">Discovered passion for programming and problem-solving</p>
+              <span class="text-sm text-aquaGreen">2020</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="min-h-screen bg-background px-6 py-20 text-white flex flex-col items-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-skyBlue">Featured Projects</h2>
+    <p class="text-gray-400 mb-12 text-center max-w-2xl">Here are some of my recent works that showcase my skills and
+      passion for building impactful solutions</p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+      <!-- Portfolio Project -->
       <div
-        class="bg-[#1A1A40] rounded-2xl overflow-hidden shadow-lg p-2 flex flex-col justify-between animate-fade-in-up">
-        <div>
-          <h3 class="text-2xl font-bold mb-4 text-neonPink">My Portfolio Website</h3>
-          <p class="text-gray-400 mb-4">A personal portfolio website to showcase my skills, projects, and experience as
-            a software developer.</p>
-          <p class="text-sm text-aquaGreen mb-4">Built with: HTML, Tailwind CSS, JavaScript</p>
+        class="group bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-neonPink/20 transition-all duration-300 transform hover:-translate-y-2 border border-gray-800 hover:border-neonPink">
+        <div class="p-6 flex flex-col h-full">
+          <div class="flex items-center justify-between mb-4">
+            <i class="fas fa-globe text-neonPink text-3xl"></i>
+            <div class="flex gap-2">
+              <a href="https://github.com/grace-mugoiri/myPortfolio" target="_blank"
+                class="text-gray-400 hover:text-aquaGreen transition">
+                <i class="fab fa-github text-xl"></i>
+              </a>
+              <span class="text-aquaGreen">
+                <i class="fas fa-external-link-alt text-xl"></i>
+              </span>
+            </div>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-neonPink group-hover:text-aquaGreen transition">Portfolio Website</h3>
+          <p class="text-gray-400 mb-4 flex-grow">A modern, responsive portfolio website showcasing my projects and
+            skills with smooth animations and interactive UI elements.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="px-3 py-1 bg-background/50 rounded-full text-xs text-aquaGreen border border-aquaGreen/30">HTML</span>
+            <span
+              class="px-3 py-1 bg-background/50 rounded-full text-xs text-aquaGreen border border-aquaGreen/30">Tailwind
+              CSS</span>
+            <span
+              class="px-3 py-1 bg-background/50 rounded-full text-xs text-aquaGreen border border-aquaGreen/30">JavaScript</span>
+          </div>
+          <span
+            class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white rounded-lg text-sm font-semibold text-center">
+            You're Here ✨
+          </span>
         </div>
-        <span
-          class="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white rounded-full text-sm font-semibold animate-pulse cursor-default">
-          You're Here ✨
-        </span>
       </div>
+
+      <!-- Pay With Sats -->
       <div
-        class="bg-[#1A1A40] rounded-2xl overflow-hidden shadow-lg p-2 flex flex-col justify-between animate-fade-in-up delay-200">
-        <div>
-          <h3 class="text-2xl font-bold mb-4 text-neonPink">Pay With Sats</h3>
-          <p>A Bitcoin payment system that allows users to pay with Satoshis, from anywhere round the globe.</p>
-          <p class="text-sm text-aquaGreen mb-4">Built with: Python, Flask, Bitcoin RPC</p>
+        class="group bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-aquaGreen/20 transition-all duration-300 transform hover:-translate-y-2 border border-gray-800 hover:border-aquaGreen">
+        <div class="p-6 flex flex-col h-full">
+          <div class="flex items-center justify-between mb-4">
+            <i class="fab fa-bitcoin text-aquaGreen text-3xl"></i>
+            <a href="https://github.com/wandiamugo/PaywithSats/tree/develop" target="_blank"
+              class="text-gray-400 hover:text-aquaGreen transition">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-neonPink group-hover:text-aquaGreen transition">Pay With Sats</h3>
+          <p class="text-gray-400 mb-4 flex-grow">A Bitcoin payment system enabling global satoshi payments with Bitcoin
+            Core integration for secure transactions.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="px-3 py-1 bg-background/50 rounded-full text-xs text-aquaGreen border border-aquaGreen/30">Python</span>
+            <span
+              class="px-3 py-1 bg-background/50 rounded-full text-xs text-aquaGreen border border-aquaGreen/30">Flask</span>
+            <span
+              class="px-3 py-1 bg-background/50 rounded-full text-xs text-aquaGreen border border-aquaGreen/30">Bitcoin
+              RPC</span>
+          </div>
+          <a href="https://github.com/wandiamugo/PaywithSats/tree/develop" target="_blank"
+            class="inline-block bg-aquaGreen text-background px-6 py-2 rounded-lg font-semibold hover:bg-green-400 transition text-center">
+            View Project
+          </a>
         </div>
-        <a href="https://github.com/wandiamugo/PaywithSats/tree/develop"
-          class="mt-auto bg-aquaGreen text-background px-4 py-2 rounded-full font-semibold hover:bg-green-400 transition">
-          View Project
-        </a>
       </div>
+
+      <!-- Cocktails Recipe -->
       <div
-        class="bg-[#1A1A40] rounded-2xl overflow-hidden shadow-lg p-2 flex flex-col justify-between animate-fade-in-up delay-300">
-        <div>
-          <h3 class="text-2xl font-bold mb-4 text-neonPink">Cocktails Recipe</h3>
-          <p>A Simple Flask web application that performs CRUD by adding cocktail recipes.</p>
-          <p class="text-sm text-aquaGreen mb-4">Built with: Tailwind CSS, Python(Flask)</p>
+        class="group bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-skyBlue/20 transition-all duration-300 transform hover:-translate-y-2 border border-gray-800 hover:border-skyBlue">
+        <div class="p-6 flex flex-col h-full">
+          <div class="flex items-center justify-between mb-4">
+            <i class="fas fa-cocktail text-skyBlue text-3xl"></i>
+            <a href="https://mococo-cocktails.onrender.com/" target="_blank"
+              class="text-gray-400 hover:text-skyBlue transition">
+              <i class="fas fa-external-link-alt text-xl"></i>
+            </a>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-neonPink group-hover:text-aquaGreen transition">Cocktails Recipe</h3>
+          <p class="text-gray-400 mb-4 flex-grow">A full-stack Flask web application featuring CRUD operations for
+            managing and sharing cocktail recipes.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="px-3 py-1 bg-background/50 rounded-full text-xs text-aquaGreen border border-aquaGreen/30">Python</span>
+            <span
+              class="px-3 py-1 bg-background/50 rounded-full text-xs text-aquaGreen border border-aquaGreen/30">Flask</span>
+            <span
+              class="px-3 py-1 bg-background/50 rounded-full text-xs text-aquaGreen border border-aquaGreen/30">Tailwind
+              CSS</span>
+          </div>
+          <a href="https://mococo-cocktails.onrender.com/" target="_blank"
+            class="inline-block bg-skyBlue text-background px-6 py-2 rounded-lg font-semibold hover:bg-blue-400 transition text-center">
+            Live Demo
+          </a>
         </div>
-        <a href="https://mococo-cocktails.onrender.com/"
-          class="mt-auto bg-skyBlue text-background px-4 py-2 rounded-full text-center font-semibold hover:bg-blue-400 transition">
-          View Project
+      </div>
+
+      <!-- Satoshi Shuttle -->
+      <div
+        class="group bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-yellow-500/20 transition-all duration-300 transform hover:-translate-y-2 border border-gray-800 hover:border-yellow-500">
+        <div class="p-6 flex flex-col h-full">
+          <div class="flex items-center justify-between mb-4">
+            <i class="fas fa-rocket text-yellow-500 text-3xl"></i>
+            <a href="https://satoshishuttle-frontend.onrender.com" target="_blank"
+              class="text-gray-400 hover:text-yellow-500 transition">
+              <i class="fas fa-external-link-alt text-xl"></i>
+            </a>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-neonPink group-hover:text-aquaGreen transition">Satoshi Shuttle</h3>
+          <p class="text-gray-400 mb-4 flex-grow">A Bitcoin-powered transportation platform connecting riders with
+            drivers using satoshi payments for fast, borderless transactions.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="px-3 py-1 bg-background/50 rounded-full text-xs text-aquaGreen border border-aquaGreen/30">React</span>
+            <span
+              class="px-3 py-1 bg-background/50 rounded-full text-xs text-aquaGreen border border-aquaGreen/30">Bitcoin</span>
+            <span
+              class="px-3 py-1 bg-background/50 rounded-full text-xs text-aquaGreen border border-aquaGreen/30">Lightning
+              Network</span>
+          </div>
+          <a href="https://satoshishuttle-frontend.onrender.com" target="_blank"
+            class="inline-block bg-yellow-500 text-background px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition text-center">
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Preview Section -->
+  <section id="blog" class="min-h-screen bg-gradient-to-br from-[#1A1A40] to-background px-6 py-20 text-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-skyBlue text-center">Latest Articles</h2>
+      <p class="text-gray-400 mb-12 text-center max-w-2xl mx-auto">Thoughts on tech, Bitcoin, and software development</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Blog Post 1 -->
+        <div class="group bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl overflow-hidden border border-gray-800 hover:border-neonPink transition-all duration-300 transform hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-neonPink/20 to-aquaGreen/20 flex items-center justify-center">
+            <i class="fab fa-medium text-6xl text-gray-400"></i>
+          </div>
+          <div class="p-6">
+            <span class="px-3 py-1 bg-neonPink/20 text-neonPink text-xs rounded-full">Bitcoin</span>
+            <h3 class="text-xl font-bold text-white mt-4 mb-3 group-hover:text-aquaGreen transition">Understanding Bitcoin Payments</h3>
+            <p class="text-gray-400 text-sm mb-4">Exploring how Bitcoin payments work and their impact on global commerce...</p>
+            <a href="https://link.medium.com/ASUd254EKhb" target="_blank" class="inline-flex items-center text-aquaGreen hover:text-neonPink transition">
+              Read More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="group bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl overflow-hidden border border-gray-800 hover:border-aquaGreen transition-all duration-300 transform hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-skyBlue/20 to-purple-500/20 flex items-center justify-center">
+            <i class="fab fa-medium text-6xl text-gray-400"></i>
+          </div>
+          <div class="p-6">
+            <span class="px-3 py-1 bg-skyBlue/20 text-skyBlue text-xs rounded-full">Web Development</span>
+            <h3 class="text-xl font-bold text-white mt-4 mb-3 group-hover:text-aquaGreen transition">Building with Flask & Python</h3>
+            <p class="text-gray-400 text-sm mb-4">A guide to creating robust web applications using Flask framework...</p>
+            <a href="https://link.medium.com/ASUd254EKhb" target="_blank" class="inline-flex items-center text-aquaGreen hover:text-neonPink transition">
+              Read More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="group bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl overflow-hidden border border-gray-800 hover:border-yellow-500 transition-all duration-300 transform hover:-translate-y-2">
+          <div class="h-48 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center">
+            <i class="fab fa-medium text-6xl text-gray-400"></i>
+          </div>
+          <div class="p-6">
+            <span class="px-3 py-1 bg-yellow-500/20 text-yellow-500 text-xs rounded-full">Career</span>
+            <h3 class="text-xl font-bold text-white mt-4 mb-3 group-hover:text-aquaGreen transition">My Journey into Tech</h3>
+            <p class="text-gray-400 text-sm mb-4">Lessons learned and experiences shared from my software development journey...</p>
+            <a href="https://link.medium.com/ASUd254EKhb" target="_blank" class="inline-flex items-center text-aquaGreen hover:text-neonPink transition">
+              Read More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="https://link.medium.com/ASUd254EKhb" target="_blank" class="inline-flex items-center gap-2 bg-transparent border-2 border-aquaGreen text-aquaGreen px-8 py-3 rounded-full font-semibold transition transform hover:scale-105 hover:bg-aquaGreen hover:text-background">
+          <i class="fab fa-medium text-xl"></i>
+          View All Articles
         </a>
       </div>
     </div>
   </section>
-  <section id="skills" class="min-h-screen bg-background p-2 text-white flex flex-col items-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-skyBlue animate-fade-in-up">Skills</h2>
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center max-w-4xl animate-fade-in-up delay-100">
-      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-        <i class="fab fa-laravel"></i> Laravel
-      </span>
-      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-        <i class="fab fa-css3-alt"></i> CSS / Tailwind CSS
-      </span>
-      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-        <i class="fab fa-js"></i> JavaScript
-      </span>
-      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-        <i class="fab fa-python"></i> Python
-      </span>
-      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-        <i class="fas fa-flask"></i> Flask
-      </span>
-      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-        <i class="fas fa-coins"></i> Bitcoin Core RPC
-      </span>
-      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-        <i class="fab fa-react"></i> React
-      </span>
-      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-        <i class="fab fa-git-alt"></i> Git & GitHub
-      </span>
-      <span class="px-4 py-2 bg-[#1A1A40] rounded-full text-aquaGreen font-semibold flex items-center gap-2">
-        <i class="fas fa-server"></i> REST APIs
-      </span>
+
+  <section id="skills" class="min-h-screen bg-background px-6 py-20 text-white flex flex-col items-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-skyBlue">Technical Skills</h2>
+    <p class="text-gray-400 mb-12 text-center max-w-2xl">Technologies and tools I use to bring ideas to life</p>
+    <div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Frontend -->
+      <div
+        class="bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl p-6 border border-gray-800 hover:border-neonPink transition">
+        <div class="flex items-center gap-3 mb-6">
+          <i class="fas fa-palette text-neonPink text-2xl"></i>
+          <h3 class="text-xl font-bold text-neonPink">Frontend</h3>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <span
+            class="px-4 py-2 bg-background/50 rounded-lg text-aquaGreen border border-aquaGreen/30 hover:border-aquaGreen transition flex items-center gap-2">
+            <i class="fab fa-html5"></i> HTML5
+          </span>
+          <span
+            class="px-4 py-2 bg-background/50 rounded-lg text-aquaGreen border border-aquaGreen/30 hover:border-aquaGreen transition flex items-center gap-2">
+            <i class="fab fa-css3-alt"></i> CSS3
+          </span>
+          <span
+            class="px-4 py-2 bg-background/50 rounded-lg text-aquaGreen border border-aquaGreen/30 hover:border-aquaGreen transition flex items-center gap-2">
+            <i class="fab fa-js"></i> JavaScript
+          </span>
+          <span
+            class="px-4 py-2 bg-background/50 rounded-lg text-aquaGreen border border-aquaGreen/30 hover:border-aquaGreen transition flex items-center gap-2">
+            <i class="fab fa-react"></i> React
+          </span>
+          <span
+            class="px-4 py-2 bg-background/50 rounded-lg text-aquaGreen border border-aquaGreen/30 hover:border-aquaGreen transition">
+            Tailwind CSS
+          </span>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div
+        class="bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl p-6 border border-gray-800 hover:border-aquaGreen transition">
+        <div class="flex items-center gap-3 mb-6">
+          <i class="fas fa-server text-aquaGreen text-2xl"></i>
+          <h3 class="text-xl font-bold text-aquaGreen">Backend</h3>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <span
+            class="px-4 py-2 bg-background/50 rounded-lg text-aquaGreen border border-aquaGreen/30 hover:border-aquaGreen transition flex items-center gap-2">
+            <i class="fab fa-python"></i> Python
+          </span>
+          <span
+            class="px-4 py-2 bg-background/50 rounded-lg text-aquaGreen border border-aquaGreen/30 hover:border-aquaGreen transition">
+            Flask
+          </span>
+          <span
+            class="px-4 py-2 bg-background/50 rounded-lg text-aquaGreen border border-aquaGreen/30 hover:border-aquaGreen transition flex items-center gap-2">
+            <i class="fab fa-laravel"></i> Laravel
+          </span>
+          <span
+            class="px-4 py-2 bg-background/50 rounded-lg text-aquaGreen border border-aquaGreen/30 hover:border-aquaGreen transition">
+            REST APIs
+          </span>
+        </div>
+      </div>
+
+      <!-- Tools & Blockchain -->
+      <div
+        class="bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl p-6 border border-gray-800 hover:border-skyBlue transition">
+        <div class="flex items-center gap-3 mb-6">
+          <i class="fab fa-bitcoin text-skyBlue text-2xl"></i>
+          <h3 class="text-xl font-bold text-skyBlue">Tools & Blockchain</h3>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <span
+            class="px-4 py-2 bg-background/50 rounded-lg text-aquaGreen border border-aquaGreen/30 hover:border-aquaGreen transition flex items-center gap-2">
+            <i class="fab fa-git-alt"></i> Git
+          </span>
+          <span
+            class="px-4 py-2 bg-background/50 rounded-lg text-aquaGreen border border-aquaGreen/30 hover:border-aquaGreen transition flex items-center gap-2">
+            <i class="fab fa-github"></i> GitHub
+          </span>
+          <span
+            class="px-4 py-2 bg-background/50 rounded-lg text-aquaGreen border border-aquaGreen/30 hover:border-aquaGreen transition flex items-center gap-2">
+            <i class="fab fa-bitcoin"></i> Bitcoin Core
+          </span>
+          <span
+            class="px-4 py-2 bg-background/50 rounded-lg text-aquaGreen border border-aquaGreen/30 hover:border-aquaGreen transition">
+            Bitcoin RPC
+          </span>
+        </div>
+      </div>
     </div>
   </section>
-  <section id="contact" class="min-h-screen bg-background p-2 text-white flex flex-col items-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-skyBlue animate-fade-in-up">Contact Me</h2>
-    <form action="mailto:your.email@example.com" method="POST" enctype="text/plain"
-      class="w-full max-w-lg flex flex-col gap-6 animate-fade-in-up delay-200">
-      <input type="text" name="name" placeholder="Your Name" required
-        class="p-4 rounded-xl bg-[#1A1A40] text-white focus:outline-none focus:ring-2 focus:ring-neonPink">
-      <input type="email" name="email" placeholder="Your Email" required
-        class="p-4 rounded-xl bg-[#1A1A40] text-white focus:outline-none focus:ring-2 focus:ring-neonPink">
-      <textarea name="message" rows="5" placeholder="Your Message" required
-        class="p-4 rounded-xl bg-[#1A1A40] text-white focus:outline-none focus:ring-2 focus:ring-neonPink"></textarea>
-      <button type="submit"
-        class="bg-aquaGreen hover:bg-green-400 text-background px-6 py-3 rounded-full font-semibold transition">
-        Send Message
-      </button>
-    </form>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="min-h-screen bg-gradient-to-br from-[#1A1A40] to-background px-6 py-20 text-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-skyBlue text-center">What People Say</h2>
+      <p class="text-gray-400 mb-12 text-center max-w-2xl mx-auto">Feedback from colleagues and collaborators</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl p-6 border border-gray-800 hover:border-neonPink transition relative">
+          <div class="absolute -top-4 left-6">
+            <div class="w-12 h-12 bg-neonPink rounded-full flex items-center justify-center">
+              <i class="fas fa-quote-left text-background text-xl"></i>
+            </div>
+          </div>
+          <div class="mt-8">
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              "Grace's passion for Bitcoin technology and her ability to build practical solutions is impressive. Her work on payment systems shows deep understanding of both code and crypto."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-neonPink to-aquaGreen rounded-full flex items-center justify-center">
+                <i class="fas fa-user text-white text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold">Bitcoin Community</h4>
+                <p class="text-gray-500 text-sm">Bitcoin DADA Member</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl p-6 border border-gray-800 hover:border-aquaGreen transition relative">
+          <div class="absolute -top-4 left-6">
+            <div class="w-12 h-12 bg-aquaGreen rounded-full flex items-center justify-center">
+              <i class="fas fa-quote-left text-background text-xl"></i>
+            </div>
+          </div>
+          <div class="mt-8">
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              "Working with Grace is a pleasure. She writes clean, maintainable code and always thinks about the user experience. Her Flask applications are solid and well-architected."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-skyBlue to-purple-500 rounded-full flex items-center justify-center">
+                <i class="fas fa-user text-white text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold">Dev Colleague</h4>
+                <p class="text-gray-500 text-sm">Software Engineer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl p-6 border border-gray-800 hover:border-skyBlue transition relative">
+          <div class="absolute -top-4 left-6">
+            <div class="w-12 h-12 bg-skyBlue rounded-full flex items-center justify-center">
+              <i class="fas fa-quote-left text-background text-xl"></i>
+            </div>
+          </div>
+          <div class="mt-8">
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              "Grace is a dedicated developer who stays up-to-date with the latest technologies. Her commitment to learning and contributing to open source is commendable."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center">
+                <i class="fas fa-user text-white text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold">Tech Sister</h4>
+                <p class="text-gray-500 text-sm">Tech Sisters Kenya</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-  <footer class="bg-[#0D0D2B] text-gray-400 text-center p-2 rounded-t-3xl">
-    <p>© 2025 Grace Mugoiri. All Rights Reserved.</p>
+
+  <section id="contact"
+    class="min-h-screen bg-background px-6 py-20 text-white flex flex-col items-center justify-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-skyBlue">Let's Connect</h2>
+    <p class="text-gray-400 mb-12 text-center max-w-2xl">Have a project in mind or just want to chat? Feel free to reach
+      out!</p>
+
+    <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Contact Info -->
+      <div class="space-y-6">
+        <div
+          class="bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl p-6 border border-gray-800 hover:border-aquaGreen transition">
+          <h3 class="text-2xl font-bold text-aquaGreen mb-6">Get in Touch</h3>
+          <div class="space-y-4">
+            <a href="mailto:gracemugoiri@gmail.com"
+              class="flex items-center gap-4 text-gray-300 hover:text-aquaGreen transition group">
+              <div
+                class="w-12 h-12 bg-background rounded-lg flex items-center justify-center group-hover:bg-aquaGreen/20 transition">
+                <i class="fas fa-envelope text-aquaGreen text-xl"></i>
+              </div>
+              <div>
+                <p class="text-sm text-gray-500">Email</p>
+                <p class="font-semibold">gracemugoiri@gmail.com</p>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/grace-mugoiri-829019134/" target="_blank"
+              class="flex items-center gap-4 text-gray-300 hover:text-skyBlue transition group">
+              <div
+                class="w-12 h-12 bg-background rounded-lg flex items-center justify-center group-hover:bg-skyBlue/20 transition">
+                <i class="fab fa-linkedin text-skyBlue text-xl"></i>
+              </div>
+              <div>
+                <p class="text-sm text-gray-500">LinkedIn</p>
+                <p class="font-semibold">Grace Mugoiri</p>
+              </div>
+            </a>
+            <a href="https://github.com/grace-mugoiri" target="_blank"
+              class="flex items-center gap-4 text-gray-300 hover:text-neonPink transition group">
+              <div
+                class="w-12 h-12 bg-background rounded-lg flex items-center justify-center group-hover:bg-neonPink/20 transition">
+                <i class="fab fa-github text-neonPink text-xl"></i>
+              </div>
+              <div>
+                <p class="text-sm text-gray-500">GitHub</p>
+                <p class="font-semibold">@grace-mugoiri</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl p-6 border border-gray-800">
+          <h3 class="text-xl font-bold text-neonPink mb-4">Follow Me</h3>
+          <div class="flex gap-4">
+            <a href="https://twitter.com/home" target="_blank"
+              class="w-12 h-12 bg-background rounded-lg flex items-center justify-center text-gray-400 hover:text-sky-400 hover:bg-sky-400/20 transition">
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="https://link.medium.com/ASUd254EKhb" target="_blank"
+              class="w-12 h-12 bg-background rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/20 transition">
+              <i class="fab fa-medium text-xl"></i>
+            </a>
+            <a href="https://www.youtube.com/@PythonBits-m3t3y" target="_blank"
+              class="w-12 h-12 bg-background rounded-lg flex items-center justify-center text-gray-400 hover:text-red-500 hover:bg-red-500/20 transition">
+              <i class="fab fa-youtube text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="bg-gradient-to-br from-[#1A1A40] to-[#0E0E2C] rounded-2xl p-6 border border-gray-800">
+        <h3 class="text-2xl font-bold text-skyBlue mb-6">Send a Message</h3>
+        <form action="mailto:your.email@example.com" method="POST" enctype="text/plain" class="space-y-4">
+          <div>
+            <label class="block text-sm text-gray-400 mb-2">Name</label>
+            <input type="text" name="name" placeholder="Your Name" required
+              class="w-full p-3 rounded-lg bg-background text-white border border-gray-700 focus:outline-none focus:border-aquaGreen transition">
+          </div>
+          <div>
+            <label class="block text-sm text-gray-400 mb-2">Email</label>
+            <input type="email" name="email" placeholder="your.email@example.com" required
+              class="w-full p-3 rounded-lg bg-background text-white border border-gray-700 focus:outline-none focus:border-aquaGreen transition">
+          </div>
+          <div>
+            <label class="block text-sm text-gray-400 mb-2">Message</label>
+            <textarea name="message" rows="4" placeholder="Your message here..." required
+              class="w-full p-3 rounded-lg bg-background text-white border border-gray-700 focus:outline-none focus:border-aquaGreen transition resize-none"></textarea>
+          </div>
+          <button type="submit"
+            class="w-full bg-aquaGreen hover:bg-green-400 text-background px-6 py-3 rounded-lg font-semibold transition transform hover:scale-105">
+            Send Message <i class="fas fa-paper-plane ml-2"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-[#0D0D2B] text-gray-400 text-center py-8 mt-20">
+    <p class="mb-2">© 2025 Grace Mugoiri. All Rights Reserved.</p>
+    <p class="text-sm text-gray-500">Built with ❤️ using HTML, Tailwind CSS & JavaScript</p>
   </footer>
   <button id="backToTopBtn"
-    class="fixed bottom-6 right-6 hidden bg-skyBlue text-background p-2 rounded-full shadow-lg hover:bg-blue-400 transition z-50 animate-bounce">
-    ↑
+    class="fixed bottom-6 right-6 hidden bg-skyBlue text-background p-4 rounded-full shadow-lg hover:bg-blue-400 transition z-50 text-xl">
+    <i class="fas fa-arrow-up"></i>
   </button>
-  <script>
-    const backToTopBtn = document.getElementById('backToTopBtn');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopBtn.classList.remove('hidden');
-      } else {
-        backToTopBtn.classList.add('hidden');
-      }
-    });
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
